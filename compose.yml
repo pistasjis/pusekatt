@@ -1,0 +1,8 @@
+services:
+
+  pusekatt:
+    container_name: pusekatt
+    build: .
+    restart: unless-stopped
+    environment:
+      - PUSEKATT_TOKEN=your_token
