@@ -4,6 +4,11 @@ from voltage.ext import commands
 
 client = commands.CommandsClient("pus ")
 
+@client.listen("ready")
+async def on_ready():
+    # set status
+    await client.set_status("Mjau 🐱! Find out how to talk to me with pus help")
+
 @client.command()
 async def ping(ctx):
     """Says hi"""
