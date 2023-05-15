@@ -4,8 +4,6 @@ WORKDIR /app
 
 RUN apk add git
 
-COPY requirements.txt requirements.txt
-
 RUN pip install git+https://github.com/EnokiUN/voltage
 
 COPY . .
